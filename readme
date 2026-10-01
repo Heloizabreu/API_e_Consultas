@@ -1,0 +1,42 @@
+# 📦 Sistema de Gestão de Almoxarifado
+
+API REST desenvolvida em PHP e PDO para controlo e gestão de peças de reposição em estoque.
+
+![alt text](<Captura de tela 2026-10-01 082338.png>)
+---
+
+## 🚀 Tecnologias Utilizadas
+
+* **PHP** (com PDO)
+* **MySQL** ou **PostgreSQL**
+* **JSON** para troca de dados
+
+---
+
+## 🗄️ Estrutura da Tabela (`pecas`)
+
+![alt text](<Captura de tela 2026-10-01 082519.png>)
+
+---
+
+## 📌 Rotas da API
+
+| Método | Rota | Descrição | Exemplo de Parâmetro |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/pecas.php` | Lista todas as peças | — |
+| `POST` | `/pecas.php` | Cadastra uma nova peça | Corpo em JSON |
+| `PUT` | `/pecas.php?id=1` | Atualiza uma peça pelo ID | ID na URL + Corpo em JSON |
+| `DELETE` | `/pecas.php?id=1` | Exclui uma peça pelo ID | ID na URL |
+
+---
+
+## 📝 Exemplo de JSON (POST / PUT)
+
+```json
+{
+  "nome": "Disjuntor Tripolar 32A",
+  "categoria": "eletrica",
+  "fornecedor": "Schneider Electric",
+  "quantidade": 25,
+  "preco_unitario": 85.50
+}
